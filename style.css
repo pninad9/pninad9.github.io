@@ -1,0 +1,603 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    font-family: "Poppins",sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  color: rgb(85, 85, 85);
+}
+
+/* TRANSITION */
+
+a,
+.btn {
+  transition: all 300ms ease;
+}
+
+/* DESKTOP NAV */
+
+nav,
+.nav-links {
+  display: flex;
+}
+
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 12vh; /* Reduced height */
+}
+
+.nav-links {
+  gap: 1.5rem; /* Reduced gap */
+  list-style: none;
+  font-size: 1.2rem; /* Adjusted font size */
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  text-decoration-color: white;
+}
+
+a:hover {
+  color: grey;
+  text-decoration: underline;
+  text-underline-offset: 0.8rem; /* Adjusted offset */
+  text-decoration-color: rgb(181, 181, 181);
+}
+
+.logo {
+  font-size: 1.8rem; /* Adjusted font size */
+}
+
+.logo:hover {
+  cursor: default;
+}
+
+/* HAMBURGER MENU */
+
+#hamburger-nav {
+  display: none;
+}
+
+.hamburger-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.hamburger-icon span {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  width: fit-content;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links a {
+  display: block;
+  padding: 8px; /* Reduced padding */
+  text-align: center;
+  font-size: 1.2rem; /* Adjusted font size */
+  color: black;
+  text-decoration: none;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links li {
+  list-style: none;
+}
+
+.menu-links.open {
+  max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+.hamburger-icon span:first-child {
+  opacity: 1;
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+/* SECTIONS */
+
+section {
+  padding-top: 2vh; /* Reduced top padding */
+  height: auto; /* Changed to auto for better content fit */
+  margin: 0 8rem; /* Reduced horizontal margin */
+  box-sizing: border-box;
+  min-height: fit-content;
+  margin-bottom: 4vh; /* Added bottom margin for consistent section spacing */
+}
+
+.section-container {
+  display: flex;
+}
+
+/* PROFILE SECTION */
+
+#profile {
+  display: flex;
+  justify-content: center;
+  gap: 4rem; /* Reduced gap */
+  height: 70vh; /* Reduced height */
+  margin-bottom: 2vh; /* Reduced bottom margin */
+}
+
+.section__pic-container {
+  display: flex;
+  height: 350px; /* Reduced height */
+  width: 350px; /* Reduced width */
+  margin: auto 0;
+}
+
+.section__text {
+  align-self: center;
+  text-align: center;
+}
+
+.section__text p {
+  font-weight: 600;
+}
+
+.section__text__p1 {
+  text-align: center;
+  margin-bottom: 0.5rem; /* Reduced margin */
+}
+
+.section__text__p2 {
+  font-size: 1.5rem; /* Reduced font size */
+  margin-bottom: 0.8rem; /* Reduced margin */
+}
+
+.title {
+  font-size: 2.8rem; /* Reduced font size */
+  text-align: center;
+  margin-bottom: 1rem; /* Adjusted margin */
+}
+
+#socials-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.8rem; /* Reduced margin */
+  gap: 0.8rem; /* Reduced gap */
+}
+
+/* ICONS */
+
+.icon {
+  cursor: pointer;
+  height: 1.8rem; /* Reduced icon size */
+}
+
+/* BUTTONS */
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem; /* Reduced gap */
+}
+
+.btn {
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 0.8rem; /* Reduced padding */
+  width: 7rem; /* Reduced width */
+  border-radius: 2rem;
+}
+
+.btn-color-1,
+.btn-color-2 {
+  border: rgb(53, 53, 53) 0.1rem solid;
+}
+
+.btn-color-1:hover,
+.btn-color-2:hover {
+  cursor: pointer;
+}
+
+.btn-color-1,
+.btn-color-2:hover {
+  background: rgb(53, 53, 53);
+  color: white;
+}
+
+.btn-color-1:hover {
+  background: rgb(0, 0, 0);
+}
+
+.btn-color-2 {
+  background: none;
+}
+
+.btn-color-2:hover {
+  border: rgb(255, 255, 255) 0.1rem solid;
+}
+
+.btn-container {
+  gap: 0.8rem; /* Reduced gap */
+}
+
+/* ABOUT SECTION */
+
+#about {
+  position: relative;
+  margin-bottom: 4vh; /* Added bottom margin for consistency */
+}
+
+.about-containers {
+  gap: 1.5rem; /* Reduced gap */
+  margin-bottom: 1.5rem; /* Reduced margin */
+  margin-top: 1.5rem; /* Reduced margin */
+}
+
+.about-details-container {
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about-containers,
+.about-details-container {
+  display: flex;
+}
+
+.about-pic {
+  border-radius: 2rem;
+}
+
+.arrow {
+  position: absolute;
+  right: -3rem; /* Adjusted position */
+  bottom: 2rem; /* Adjusted position */
+  height: 2.5rem; /* Adjusted arrow size */
+}
+
+.details-container {
+  padding: 1.2rem; /* Reduced padding */
+  flex: 1;
+  background: white;
+  border-radius: 1.5rem; /* Adjusted border-radius */
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  text-align: center;
+}
+
+.section-container {
+  gap: 3rem; /* Reduced gap */
+  height: auto; /* Changed to auto for better content fit */
+}
+
+.section__pic-container {
+  height: 350px; /* Consistent with profile section */
+  width: 350px; /* Consistent with profile section */
+  margin: auto 0;
+}
+
+/* NEW WORK EXPERIENCE SECTION */
+/* ... (rest of your style.css code) ... */
+
+/* NEW WORK EXPERIENCE SECTION */
+#work-experience {
+  position: relative;
+  margin-bottom: 4vh; /* Consistent spacing */
+}
+
+#work-experience .title {
+  margin-bottom: 2rem; /* Space below title */
+}
+
+/* Add this new rule to make the work experience items span full width */
+#work-experience .section-container {
+    flex-direction: column; /* Stacks children vertically */
+    gap: 2rem; /* Adds space between individual experience blocks */
+}
+
+#work-experience .about-details-container {
+    width: 100%; /* Ensure this container takes full width */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center the experience items if they are narrower */
+}
+
+.work-experience-item {
+  margin-bottom: 2rem; /* Space between each experience entry */
+  padding: 1.5rem;
+  border: rgb(163, 163, 163) 0.1rem solid;
+  border-radius: 1.5rem;
+  width: 100%; /* Make each item take full available width */
+  box-sizing: border-box; /* Include padding and border in the width */
+  max-width: 800px; /* Optional: set a max-width for readability on very wide screens */
+  text-align: left; /* Align text to the left */
+}
+
+.work-experience-item h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: black;
+}
+
+.work-experience-item .job-title {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: rgb(85, 85, 85);
+}
+
+.work-experience-item ul {
+  list-style: disc;
+  margin-left: 1.5rem;
+  color: rgb(85, 85, 85);
+}
+
+.work-experience-item li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+/* ... (rest of your style.css code) ... */
+
+/* EXPERIENCE SECTION (Skills) */
+
+/* ... (rest of your style.css code) ... */
+
+/* EXPERIENCE SECTION (Skills) */
+
+#experience {
+  position: relative;
+  margin-bottom: 4vh; /* Consistent spacing */
+}
+
+.experience-sub-title {
+  color: rgb(85, 85, 85);
+  font-weight: 600;
+  font-size: 1.5rem; /* Reduced font size */
+  margin-bottom: 1.5rem; /* Reduced margin */
+  text-align: center; /* Ensure sub-title is centered */
+}
+
+.experience-details-container {
+  display: flex;
+  justify-content: center; /* Center the two details-containers */
+  flex-direction: column;
+}
+
+.about-containers { /* This is the container for the two skill columns */
+    display: flex;
+    flex-wrap: wrap; /* Allows columns to wrap on smaller screens */
+    justify-content: center; /* Centers the skill columns */
+    gap: 2rem; /* Gap between the two skill columns */
+}
+
+
+.details-container { /* These are your individual skill columns (Data Science, AI/ML) */
+  padding: 1.2rem;
+  flex: 1; /* Allows them to grow, but min-width or max-width might be needed */
+  background: white;
+  border-radius: 1.5rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  text-align: center;
+  /* Add min-width to ensure they don't get too small and stack properly */
+  min-width: 280px; /* Adjust as needed based on your content and desired layout */
+  max-width: 450px; /* Optional: cap maximum width for very wide screens */
+}
+
+
+.article-container {
+  display: flex;
+  /* text-align: initial; */ /* Removed, let inner content determine alignment */
+  flex-wrap: wrap;
+  /* flex-direction: row; */ /* Already default for flex-wrap */
+  gap: 1rem; /* Reduced gap between individual skill items */
+  justify-content: center; /* Changed from space-around to center for better alignment */
+  align-items: flex-start; /* Aligns items to the top if they have different heights */
+}
+
+article {
+  display: flex;
+  /* width: 9rem; */ /* Removed fixed width, let content dictate for better wrapping */
+  min-width: 8rem; /* Set a min-width to prevent items from becoming too small */
+  max-width: 12rem; /* Set a max-width to prevent items from becoming too wide */
+  justify-content: flex-start; /* Align icon and text to the start of the article */
+  align-items: center; /* Vertically align icon and text */
+  gap: 0.5rem;
+  text-align: left; /* Ensure text within article is left-aligned */
+}
+
+article .icon {
+  cursor: default;
+  flex-shrink: 0; /* Prevent icon from shrinking */
+}
+
+article div {
+    white-space: nowrap; /* Prevent text from wrapping prematurely within the div */
+}
+
+/* ... (rest of your style.css code) ... */
+
+/* PROJECTS SECTION */
+
+#projects {
+  position: relative;
+  margin-bottom: 4vh; /* Consistent spacing */
+}
+
+.color-container {
+  border-color: rgb(163, 163, 163);
+  background: rgb(250, 250, 250);
+}
+
+.project-img {
+  border-radius: 1.5rem; /* Adjusted border-radius */
+  width: 90%;
+  height: 90%;
+}
+
+.project-title {
+  margin: 0.8rem; /* Reduced margin */
+  color: black;
+}
+
+.project-btn {
+  color: black;
+  border-color: rgb(163, 163, 163);
+}
+
+/* CONTACT */
+
+#contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: auto; /* Changed to auto */
+  margin-bottom: 2vh; /* Consistent spacing */
+}
+
+.contact-info-upper-container {
+  display: flex;
+  justify-content: center;
+  border-radius: 1.5rem; /* Adjusted border-radius */
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  background: (250, 250, 250);
+  margin: 1.5rem auto; /* Reduced margin */
+  padding: 0.5rem;
+}
+
+.contact-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0.8rem; /* Reduced margin */
+}
+
+.contact-info-container p {
+  font-size: 1.1rem; /* Adjusted font size */
+}
+
+.contact-icon {
+  cursor: default;
+}
+
+.email-icon {
+  height: 2rem; /* Adjusted icon size */
+}
+
+/* FOOTER SECTION */
+
+footer {
+  height: 20vh; /* Reduced height */
+  margin: 0 1rem;
+  padding-top: 2vh; /* Added padding */
+}
+
+footer p {
+  text-align: center;
+}
+
+/* JOB EXPERIENCE SECTION */
+
+
+  .job-duration {
+    font-size: 0.8em; /* Adjust as needed for slight lesser font size */
+    font-weight: normal; /* To prevent it from being bold if the job title is bold */
+    margin-left: 5px; /* Adds a little space between title and duration */
+  } 
+
+/* ======================== */
+/* CERTIFICATIONS SECTION   */
+/* ======================== */
+
+#certifications {
+  margin-top: 6rem;
+}
+
+/* Main container for all certification rows */
+.certifications-container {
+  max-width: 850px; /* Adjust this value to make the rows wider or narrower */
+  margin: 2rem auto 0 auto; /* This centers the container on the page */
+  display: flex;
+  flex-direction: column; /* Stacks the certification rows vertically */
+  gap: 1.5rem; /* Adds space between each certification row */
+}
+
+/* Styles for each individual certification row */
+.cert-item {
+  display: flex; /* Aligns content (logo/name and button) in a row */
+  justify-content: space-between; /* Pushes the name and button to opposite ends */
+  align-items: center; /* Vertically centers the content in the row */
+  padding: 1rem 1.5rem; /* Adds internal spacing */
+  background: white;
+  border-radius: 2rem; /* Creates the rounded corners */
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  box-sizing: border-box;
+}
+
+/* Container for the logo image and the certification name */
+.cert-logo-and-name {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem; /* Adds space between the logo and the text */
+}
+
+/* Styles for the certification logo image */
+.cert-logo {
+  height: 45px; /* Sets a fixed height for the logo */
+  width: auto;
+  object-fit: contain;
+}
+
+/* Styles for the certification name text */
+.cert-item h3 {
+  margin: 0; /* Removes default browser margin from the heading */
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: rgb(53, 53, 53);
+}

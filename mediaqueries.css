@@ -1,0 +1,120 @@
+@media screen and (max-width: 1400px) {
+  #profile {
+    height: 70vh; /* Adjusted height */
+    margin-bottom: 4rem; /* Adjusted margin */
+  }
+  .about-containers {
+    flex-wrap: wrap;
+  }
+  #contact,
+  #projects,
+  #work-experience { /* Added work-experience */
+    height: fit-content;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #desktop-nav {
+    display: none;
+  }
+  #hamburger-nav {
+    display: flex;
+  }
+  #experience,
+  #work-experience, /* Added work-experience */
+  .experience-details-container {
+    margin-top: 1.5rem; /* Adjusted margin */
+  }
+  #profile,
+  .section-container {
+    display: block;
+  }
+  .arrow {
+    display: none;
+  }
+  section,
+  .section-container {
+    height: fit-content;
+  }
+  section {
+    margin: 0 5%;
+    margin-bottom: 3vh; /* Consistent section spacing for smaller screens */
+  }
+  .section__pic-container {
+    width: 250px; /* Adjusted width */
+    height: 250px; /* Adjusted height */
+    margin: 0 auto 1.5rem; /* Adjusted margin */
+  }
+  .about-containers {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #contact,
+  footer {
+    height: auto; /* Adjusted height */
+    padding-bottom: 2rem; /* Added padding */
+  }
+  #profile {
+    height: 70vh; /* Adjusted height */
+    margin-bottom: 0;
+  }
+  article {
+    font-size: 0.9rem; /* Adjusted font size */
+  }
+  footer nav {
+    height: fit-content;
+    margin-bottom: 1.5rem; /* Adjusted margin */
+  }
+  .about-containers,
+  .contact-info-upper-container,
+  .btn-container {
+    flex-wrap: wrap;
+  }
+  .contact-info-container {
+    margin: 0;
+  }
+  .contact-info-container p,
+  .nav-links li a {
+    font-size: 0.9rem; /* Adjusted font size */
+  }
+  .experience-sub-title {
+    font-size: 1.1rem; /* Adjusted font size */
+  }
+  .logo {
+    font-size: 1.3rem; /* Adjusted font size */
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  .section__pic-container {
+    width: auto;
+    height: 40vw; /* Adjusted height */
+    justify-content: center;
+  }
+  .section__text__p2 {
+    font-size: 1.1rem; /* Adjusted font size */
+  }
+  .title {
+    font-size: 1.8rem; /* Adjusted font size */
+  }
+  .text-container {
+    text-align: justify;
+    padding: 1rem; /* Added padding for better readability */
+  }
+  .work-experience-item {
+    padding: 1rem; /* Adjusted padding */
+  }
+  .work-experience-item h2 {
+    font-size: 1.5rem; /* Adjusted font size */
+  }
+  .work-experience-item .job-title {
+    font-size: 1.1rem; /* Adjusted font size */
+  }
+  .work-experience-item ul {
+    margin-left: 1rem; /* Adjusted margin */
+  }
+}

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+</head>
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">Ninad Patil</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#work-experience">Experience</a></li>
+                <li><a href="#experience">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Ninad Patil</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#work-experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Skills</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profile.jpg" alt="Ninad's profile picture"  style="border-radius: 50%;"/>
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+
+        <h1 class="title">Ninad Patil</h1>
+        <br>
+        <h3></h3>
+       
+        
+        <br>
+        <h3>Contact:</h3>
+        <h3>Email: pninad009@gmail.com <br>Phone: +44 07471566316</h>
+        <br>
+        <br>
+        <p class="section__text__p2">Data Engineer / Data Analyst</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/Ninad Patil Data Analyst CV.pdf')"
+          >
+            Download Data Analyst CV
+          </button>
+           <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/Ninad Patil Data Engineer CV.pdf')"
+          >
+            Download Data Engineer CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/pninad/'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/pninad9'"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="about-details-container">
+          <div class="text-container">
+            <p>
+            <strong>Data Analyst</strong> & <strong>Data Engineer</strong> with nearly <strong>4 years’ experience</strong> turning messy source feeds into fast, trustworthy insight <strong>ingesting ~1M rows/week</strong>and <strong>building 15+ executive dashboards</strong> for self-serve decisions across <strong>Ops</strong> & <strong>Finance.</strong>Designed <strong>metadata-driven ADF pipelines</strong> that cut daily <strong>refresh ~50%</strong> and automated ~16 staff hours/week; tuned <strong>PostgreSQL (partitioning + indexing) for ~35% faster queries.</strong>
+Fluent in <strong>SQL,</strong> <strong>Python,</strong> <strong>Power BI/DAX,</strong> <strong>Azure</strong> & <strong>DataBricks</strong>; translate ambiguous asks into clear <strong>KPIs/OKRs</strong>, pairing <strong>A/B testing</strong> with rigorous <strong>data quality</strong> & <strong>governance</strong> to drive SLA-aligned decisions.
+Portfolio showcases <strong>Databricks</strong> excellence <strong>Autoloader</strong>, <strong>Delta Live Tables</strong>, <strong>Unity Catalog</strong>, and <strong>Delta Lake</strong> patterns demonstrating <strong>production-ready</strong>, end-to-end data ops tied to measurable business outcomes.
+            </p>
+          </div>
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>Nearly 4 years <br />Data Engineering & Data Analysis</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p><strong>MSc in Advance Computer Science with Data Science</strong> - University of Strathclyde <br><strong>Bachelors in Computer Application</strong> - Pune University </p>
+            </div>
+          </div>
+        </div>
+      </div>  
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#work-experience'"
+      />
+</section>
+<section id="work-experience">
+    <p class="section__text__p1">My Recent Journey</p>
+    <h1 class="title">Work Experience</h1>
+    <div class="section-container">
+      <div class="about-details-container">
+
+        <div class="text-container work-experience-item">
+          <h2>The DRG</h2>
+          <h3 class="job-title">Data Analyst and Engineer <span class="job-duration">(May 2024 - Paresent)</span></h3>
+          <ul>
+            <li>Delivered parameterized <strong>ADF</strong> pipelines processing <strong>~1M+ rows/week</strong> from EPOS, loyalty, and REST APIs; standardized schemas with <strong>idempotent loads</strong> and drift-tolerant ingestion.</li>
+            <li>Migrated MySQL to <strong>Azure PostgreSQL</strong> and re-modeled facts/dims with targeted <strong>BTREE indexes</strong> and date/location <strong>partitioning,</strong> reducing key report query times <strong>~35%.</strong> .</li>
+            <li>Automated daily data extraction from <strong>RESTful APIs</strong> and <strong>web scraping (BeautifulSoup, Selenium)</strong> and converting <strong>JSON, XML</strong> data into structured formats, improving database performance and usability. </li>
+            <li>Modeled governed gold datasets for <strong>Power BI</strong> with <strong>RLS</strong> and Incremental Refresh, increased dashboard adoption and reduced refresh failures per week. </li>
+            <li>Designed and optimized robust, scalable database and <strong>schema models</strong> in collaboration with Finance and key stakeholders, ensuring <strong>data integrity,</strong> accessibility, and alignment with business needs.</li>
+              <li>Automated ~16 staff-hours/week by orchestrating <strong>VBA/Python</strong> jobs and SQL scheduling to burst standardized PDF packs to 20+ sites, cutting manual reporting and formatting defects.</li>
+            <li>Cut daily refresh time <strong>~50%</strong> by <strong>parallelizing</strong> safe paths and removing redundant stages; reduced end-to-end runtime and increased on-time report readiness for Finance/Ops. </li>
+            <li>Partnered with Loyalty/Marketing/Ops to analyze seasonality and run <strong>A/B tests</strong>; translated findings into campaign targeting and service planning. </li>
+            <li>Implemented automated <strong>Power BI dashboards</strong>Power BI dashboards for near real-time reporting and strategic decision-making, increasing quarterly revenue by <strong>15%</strong> through enhanced sales insights.</li>  
+          </ul>
+        </div>
+        <div class="text-container work-experience-item">
+          <h2>NSEIT Limited</h2>
+          <h3 class="job-title">Data Analyst <span class="job-duration">(April 2021 - March 2022)</span></h3>
+          <ul>
+            <li>Automated <strong>SQL/Python ingestion</strong> and preprocessing with parameterized validations (types, duplicates, referential checks), freeing <strong>~10 hrs/week</strong> and shortening release cycles. </li>
+            <li>Co-designed a governed preprocessing framework with a 6-person team (standardized schemas, data dictionary, access controls), reducing rework and handoffs across monthly releases.</li>
+            <li>Automated recurring reconciliations and data-processing workflows, <strong>freeing ~10 hours/week</strong> and <strong>shortening analysis turnaround</strong> for stakeholders.</strong>.</li>
+            <li>Generated comprehensive <strong>20+ reports</strong> and dashboards to support informed decision-making by stakeholders. </li>
+            <li>Monitored <strong>data integrity</strong> and <strong>quality</strong>, promptly addressing discrepancies and improving reporting reliability.</li>
+          </ul>
+        </div>
+        <div class="text-container work-experience-item">
+          <h2>Swami Vivekanand Education and Research Centre</h2>
+          <h3 class="job-title">Data Analyst <span class="job-duration">(March 2020 - March 2021)</span></h3>
+          <ul>
+            <li>Integrated and standardized multi-source data with Python <strong>(Pandas/NumPy)</strong>, cutting processing time by <strong>~20%</strong> and improving data reliability for downstream reporting. </li>
+            <li>Built interactive Power BI dashboards for <strong>KPI tracking,</strong> enabling <strong>self-service analysis</strong> and faster decision cycles. </li>
+            <li>Authored and optimized  <strong>Advanced SQL</strong> to profile and segment customers, delivering a <strong>~25%</strong> uplift in decisionready insights for stakeholders. </li>
+            <li>Increased stakeholder engagement by <strong>~30% through</strong> targeted walkthroughs, <strong>clear documentation</strong>, and <strong>iterative dashboard</strong> improvements.</li>
+          </ul>
+        </div>
+        
+      </div>
+    </div>
+    <img
+      src="./assets/arrow.png"
+      alt="Arrow icon"
+      class="icon arrow"
+      onclick="location.href='./#experience'"
+    />
+</section>
+    <section id="experience">
+      <p class="section__text__p1"></p>
+      <h1 class="title">Skills</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="text-container work-experience-item">
+            <div class="article-container">
+              <ul>
+            <li><strong>Cloud/Platform:</strong> Azure (ADLS Gen2, Azure SQL Database, Key Vault), Databricks (DLT, Autoloader, Structured Streaming, Unity Catalog, SQL Warehouse) </li>
+            <li><strong>Data Engineering:</strong> ETL/ELT, CDC, SCD Types, Dimensional Modeling (Star/Snowflake), Delta Lake, Medallion Architecture, Data Quality (DLT Expectations), Lineage/Observability </li>
+            <li><strong>Orchestration/Automation:</strong> Azure Data Factory (pipelines, Mapping Data Flows, SHIR), Azure Logic Apps, 
+            GitHub Actions, Databricks Asset Bundles (CI/CD) </li>
+            <li> <strong>Programming/Query:</strong> Python (Pandas, NumPy, PySpark, SQLAlchemy, Flask), SQL/T-SQL (CTEs, window functions, performance tuning), Bash, DAX, PostgreSQL, MySQL, REST/HTTP APIs, JSON/XML </li>
+            <li><strong>Analytics/BI:</strong> Power BI (DAX, RLS, Incremental Refresh, semantic models), Excel (Pivot Tables, VBA Automation), Grafana, Matplotlib, Seaborn </li>
+            <li><strong>Data Acquisition:</strong> REST APIs, BeautifulSoup, Selenium, Web Scraping, Managed Identity Authentication, Python Automation Scripts </li>
+            <li><strong>Other:</strong> Docker, Git/GitHub, Documentation & Runbooks WORK HISTORY  </li>
+          </ul>
+              <article>
+                <div>
+                  <h3> </h3>
+                  <p></p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/ADF + Databricks Project 1.png"
+                
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">End to End Azure Databricks Data Engineering Project</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/pninad9/End-to-End-Azure-Databricks-Data-Engineering-Project.git'"
+              >
+                Github
+              </button>
+            </div>
+            <br>
+            <p class="project-description">This project is a full <strong>Azure</strong> Data Engineering build that ingests from a <strong>cloud-hosted Azure SQL</strong> Database into 
+              <strong>ADLS Gen2</strong> using <strong>Azure Data Factory (ADF)</strong> with incremental loading and backfilling (not a full refresh). Data is refined in <strong>Azure Databricks</strong>
+               with <strong>Spark Structured Streaming + Autoloader</strong>, governed by <strong>Unity Catalog</strong>, and modeled into a star schema with <strong>Slowly Changing Dimensions (SCD Type 2)</strong>
+               . The Gold layer is curated via <strong>Delta Live Tables (DLT)</strong>, and deployments follow <strong>CI/CD</strong> best practices using <strong>Databricks Asset Bundles</strong> and GitHub. Logic Apps provide email alerts on ADF failures. The project also covers the full resource setup (RG, Storage with bronze/silver/gold, ADF, SQL DB, Databricks workspace).</p>
+          </div>
+           <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/DBT Project 4.png"
+                
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">DBT Databricks Scd2 Data Quality</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/pninad9/dbt-databricks-scd2-data-quality.git'"
+              >
+                Github
+              </button>
+            </div>
+            <br>
+            <p class="project-description">A production-style <strong>dbt</strong> Core project on <strong>Databricks (Unity Catalog)</strong> implementing the Medallion architecture (Bronze → Silver → Gold). 
+              Raw sources are declared in <strong>YAML</strong> and landed to Bronze, standardized and joined in Silver , and delivered as analytics marts in Gold with SCD Type-2 history via <strong>dbt snapshots.</strong>
+               Quality is enforced through <strong>generic, singular,</strong> and <strong>custom generic tests</strong>, plus <strong>seeds</strong> for lookups and <strong>Jinja macros</strong> for reusable logic. 
+               The repo uses environment-driven profiles.yml, clear <strong>lineage</strong>, incremental <strong>dbt models,</strong> and a CI-friendly dbt build flow making it reliable, auditable, and deployment-ready.</p>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/DLT Project 2.png"
+                alt="RAG using Gradio, OLLAMA & LangChain"
+                class="project-img" 
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Databricks Medallion Lakehouse — Declarative Pipelines (DLT)</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/pninad9/DataBricks-Declarative-Pipelines.git'"
+              >
+                Github
+              </button>
+            </div>
+            <br>
+            <p class="project-description">This project delivers an end-to-end <strong>Databricks Lakehouse</strong> built entirely with Lakeflow Declarative Pipelines (DLT). 
+              It implements the <strong>Medallion pattern</strong> Bronze landing with <strong>Expectations</strong>, Silver enrichment via <strong>Auto-CDC (Type-1 upserts)</strong> exposed through stable views, 
+              and Gold with <strong>SCD2 dimensions</strong>, a Type-1 fact table, and a full-history materialized business view. The project supports <strong>streaming and batch</strong> in one pipeline,
+               comes with <strong>reusable utilities</strong>, and provides SQL scripts to seed/increment data plus screenshots of each stage. </p>
+          </div>
+                  <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/ADF Project 3.png"
+                alt="Contrastive Learning Thumbnail"
+                class="project-img" 
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Azure Data Factory Hybrid Medallion Lakehouse (On-Prem + API + SQL → ADLS)</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/pninad9/Azure-Data-Factory-End-to-End-Project-On_Prem-API-SQL.git'"
+              >
+                Github
+              </button>
+            </div>
+            <br>
+            <p class="project-description"> This project is a production-style <strong>Azure Data Factory (ADF)</strong> build that ingests data from <strong>on-prem file shares</strong>, 
+              <strong>REST APIs</strong>, and <strong>Azure SQL</strong> Database into <strong>ADLS Gen2</strong>. It models the data using the Medallion architecture 
+              Bronze: Fast, schema-light landing <strong>(CSV/JSON/Parquet/Delta)</strong> for raw capture. Silver: Standardized Delta with data cleaning, type casting, 
+              derivations, and upsert logic keyed by business IDs. Gold: Curated business views <strong>(joins, aggregations, dense ranking, Top-N)</strong> refreshed with overwrite.Orchestration is handled by a Parent Pipeline that chains the three ingestion paths and kicks off transformations. 
+              <strong>Hybrid connectivity</strong> to the on-prem share is enabled via <strong>Self-Hosted Integration Runtime (SHIR)</strong>. A publish folder is included for <strong>ARM-based CI/CD.</strong> </p>
+          </div>
+
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#certifications'"
+      />
+    </section>
+    <p class="section__text__p1">Will be adding more projects soon !!</p>
+    <br>
+
+
+  <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:suryawanshi.parth4@gmail.com">pninad009@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/pninad/">LinkedIn</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/call.png"
+            alt="Contact icon"
+            class="icon linkedin-icon"
+          />
+          <p>+44 07471566316 / +91 7507518753</p>
+          
+          
+          <p></strong></strong></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#work-experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2025 Ninad Patil. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
