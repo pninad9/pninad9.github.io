@@ -242,7 +242,7 @@ Portfolio showcases <strong>Databricks</strong> excellence <strong>Autoloader</s
               <strong>ADLS Gen2</strong> using <strong>Azure Data Factory (ADF)</strong> with incremental loading and backfilling (not a full refresh). Data is refined in <strong>Azure Databricks</strong>
                with <strong>Spark Structured Streaming + Autoloader</strong>, governed by <strong>Unity Catalog</strong>, and modeled into a star schema with <strong>Slowly Changing Dimensions (SCD Type 2)</strong>
                . The Gold layer is curated via <strong>Delta Live Tables (DLT)</strong>, and deployments follow <strong>CI/CD</strong> best practices using <strong>Databricks Asset Bundles</strong> and GitHub. Logic Apps provide email alerts on ADF failures. The project also covers the full resource setup (RG, Storage with bronze/silver/gold, ADF, SQL DB, Databricks workspace).</p>
-          </div>
+          </div><br>
            <div class="details-container color-container">
             <div class="article-container">
               <img
@@ -265,6 +265,29 @@ Portfolio showcases <strong>Databricks</strong> excellence <strong>Autoloader</s
               Raw sources are declared in <strong>YAML</strong> and landed to Bronze, standardized and joined in Silver , and delivered as analytics marts in Gold with SCD Type-2 history via <strong>dbt snapshots.</strong>
                Quality is enforced through <strong>generic, singular,</strong> and <strong>custom generic tests</strong>, plus <strong>seeds</strong> for lookups and <strong>Jinja macros</strong> for reusable logic. 
                The repo uses environment-driven profiles.yml, clear <strong>lineage</strong>, incremental <strong>dbt models,</strong> and a CI-friendly dbt build flow making it reliable, auditable, and deployment-ready.</p>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/Snowflake+Kafka Project 5.jpeg"
+                
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Real Time Stock Market Data Pipeline</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/pninad9/Real-Time-Stock-Market-Data-Pipeline.git'"
+              >
+                Github
+              </button>
+            </div>
+            <br>
+            <p class="project-description">I built a <strong>real-time Stock Market Data Pipeline</strong> that streams live quotes end-to-end for fast, reliable analytics.
+               <strong>Kafka</strong> ingests events to an <strong>S3</strong> raw landing zone, and <strong>Airflow</strong> micro-batches them into <strong>Snowflake</strong> via stage-based PUT/COPY with <strong>idempotent</strong> loads. 
+               In Snowflake, dbt applies the Medallion pattern (Bronze/Silver/Gold), converting <strong>JSON VARIANT</strong> into clean, tested, lineage-tracked models. 
+               The entire stack runs in <strong>Docker Compose</strong>, enabling one-command spin-up and easy portability across environments. <strong>~1-minute</strong> KPIs and candlesticks for BI with strong governance, observability, and clear separation of concerns.</p>
           </div>
           <div class="details-container color-container">
             <div class="article-container">
