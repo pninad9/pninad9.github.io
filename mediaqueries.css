@@ -1,120 +1,83 @@
-@media screen and (max-width: 1400px) {
-  #profile {
-    height: 70vh; /* Adjusted height */
-    margin-bottom: 4rem; /* Adjusted margin */
+/* Large tablets / smaller laptops */
+@media (max-width: 1024px) {
+  .hero__content {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.9fr);
+    gap: 2.3rem;
   }
-  .about-containers {
-    flex-wrap: wrap;
+
+  .skills-grid,
+  .projects-grid,
+  .contact-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  #contact,
-  #projects,
-  #work-experience { /* Added work-experience */
-    height: fit-content;
+
+  .about-grid {
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.1fr);
   }
 }
 
-@media screen and (max-width: 1200px) {
-  #desktop-nav {
+/* Tablets & below */
+@media (max-width: 768px) {
+  .nav__toggle {
+    display: inline-flex;
+  }
+
+  .nav__links {
+    position: absolute;
+    inset: var(--nav-height) 0 auto 0;
+    padding: 0.9rem 1.4rem 1.2rem;
+    flex-direction: column;
+    gap: 0.75rem;
+    background: rgba(15, 23, 42, 0.98);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.4);
     display: none;
   }
-  #hamburger-nav {
+
+  .nav__links--open {
     display: flex;
   }
-  #experience,
-  #work-experience, /* Added work-experience */
-  .experience-details-container {
-    margin-top: 1.5rem; /* Adjusted margin */
+
+  .hero__content {
+    grid-template-columns: minmax(0, 1fr);
+    margin-top: 1.4rem;
   }
-  #profile,
-  .section-container {
-    display: block;
+
+  .hero__right {
+    order: -1;
   }
-  .arrow {
-    display: none;
+
+  .section {
+    padding: 4rem 0;
   }
-  section,
-  .section-container {
-    height: fit-content;
+
+  .about-grid {
+    grid-template-columns: minmax(0, 1fr);
   }
-  section {
-    margin: 0 5%;
-    margin-bottom: 3vh; /* Consistent section spacing for smaller screens */
+
+  .skills-grid,
+  .projects-grid,
+  .contact-grid {
+    grid-template-columns: minmax(0, 1fr);
   }
-  .section__pic-container {
-    width: 250px; /* Adjusted width */
-    height: 250px; /* Adjusted height */
-    margin: 0 auto 1.5rem; /* Adjusted margin */
-  }
-  .about-containers {
-    margin-top: 0;
+
+  .site-footer__inner {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
-@media screen and (max-width: 600px) {
-  #contact,
-  footer {
-    height: auto; /* Adjusted height */
-    padding-bottom: 2rem; /* Added padding */
-  }
-  #profile {
-    height: 70vh; /* Adjusted height */
-    margin-bottom: 0;
-  }
-  article {
-    font-size: 0.9rem; /* Adjusted font size */
-  }
-  footer nav {
-    height: fit-content;
-    margin-bottom: 1.5rem; /* Adjusted margin */
-  }
-  .about-containers,
-  .contact-info-upper-container,
-  .btn-container {
-    flex-wrap: wrap;
-  }
-  .contact-info-container {
-    margin: 0;
-  }
-  .contact-info-container p,
-  .nav-links li a {
-    font-size: 0.9rem; /* Adjusted font size */
-  }
-  .experience-sub-title {
-    font-size: 1.1rem; /* Adjusted font size */
-  }
-  .logo {
-    font-size: 1.3rem; /* Adjusted font size */
-  }
-  .nav-links {
+/* Small phones */
+@media (max-width: 480px) {
+  .hero__actions {
     flex-direction: column;
-    gap: 0.5rem;
-    text-align: center;
+    align-items: stretch;
   }
-  .section__pic-container {
-    width: auto;
-    height: 40vw; /* Adjusted height */
-    justify-content: center;
+
+  .hero__meta {
+    flex-direction: column;
   }
-  .section__text__p2 {
-    font-size: 1.1rem; /* Adjusted font size */
-  }
-  .title {
-    font-size: 1.8rem; /* Adjusted font size */
-  }
-  .text-container {
-    text-align: justify;
-    padding: 1rem; /* Added padding for better readability */
-  }
-  .work-experience-item {
-    padding: 1rem; /* Adjusted padding */
-  }
-  .work-experience-item h2 {
-    font-size: 1.5rem; /* Adjusted font size */
-  }
-  .work-experience-item .job-title {
-    font-size: 1.1rem; /* Adjusted font size */
-  }
-  .work-experience-item ul {
-    margin-left: 1rem; /* Adjusted margin */
+
+  .hero-illustration {
+    max-width: 300px;
   }
 }
