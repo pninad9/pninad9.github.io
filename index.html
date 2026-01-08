@@ -506,25 +506,23 @@
           <article class="project-card">
             <div class="project-card__thumb">
               <img
-                src="./assets/DBT Project 4.png"
-                alt="DBT Databricks Scd2 Data Quality"
+                src="./assets/AWS + Snowflake+ dbt project 6.png"
+                alt="Airbnb Lakehouse Pipeline S3 Snowflake dbt"
                 class="project-card__img"
               />
-              <span class="project-card__tag">dbt · Databricks</span>
+              <span class="project-card__tag">AWS S3· Snowflake · dbt</span>
             </div>
             <div class="project-card__body">
-              <h3 class="project-card__title">DBT Databricks Scd2 Data Quality</h3>
+              <h3 class="project-card__title">Airbnb Lakehouse Pipeline S3 Snowflake dbt</h3>
               <p class="project-card__text">
-                A production-style dbt Core project on Databricks (Unity Catalog) implementing the Medallion architecture 
-                (Bronze → Silver → Gold). Raw sources are declared in YAML and landed to Bronze, standardized and joined in Silver, 
-                and delivered as analytics marts in Gold with SCD Type-2 history via dbt snapshots. Quality is enforced through 
-                generic, singular, and custom generic tests, plus seeds for lookups and Jinja macros for reusable logic. The repo 
-                uses environment-driven profiles.yml, clear lineage, incremental dbt models, and a CI-friendly dbt build flow 
-                making it reliable, auditable, and deployment-ready.
+                This project showcases a full ELT pipeline built with AWS S3 → Snowflake → dbt, designed around a Bronze/Silver/Gold modeling approach. 
+                I ingested Airbnb-style CSV datasets into Snowflake using stages and COPY INTO, then used dbt to build incremental raw models (Bronze), 
+                cleaned and enriched models (Silver), and analytics-ready models (Gold). The Gold layer includes a metadata-driven OBT for maintainable 
+                joins and a Star Schema powered by SCD2 snapshots to preserve dimensional history for accurate time-based reporting
               </p>
               <button
                 class="btn btn--ghost btn--small"
-                onclick="location.href='https://github.com/pninad9/dbt-databricks-scd2-data-quality.git'"
+                onclick="location.href='https://github.com/pninad9/Airbnb_Lakehouse_Pipeline-S3-Snowflake-dbt.git'"
               >
                 View on GitHub
               </button>
@@ -622,6 +620,35 @@
             </div>
           </article>
         </div>
+
+         <!-- Project 6 -->
+          <article class="project-card">
+            <div class="project-card__thumb">
+              <img
+                src="./assets/DBT Project 4.png"
+                alt="DBT Databricks Scd2 Data Quality"
+                class="project-card__img"
+              />
+              <span class="project-card__tag">dbt · Databricks</span>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">DBT Databricks Scd2 Data Quality</h3>
+              <p class="project-card__text">
+                A production-style dbt Core project on Databricks (Unity Catalog) implementing the Medallion architecture 
+                (Bronze → Silver → Gold). Raw sources are declared in YAML and landed to Bronze, standardized and joined in Silver, 
+                and delivered as analytics marts in Gold with SCD Type-2 history via dbt snapshots. Quality is enforced through 
+                generic, singular, and custom generic tests, plus seeds for lookups and Jinja macros for reusable logic. The repo 
+                uses environment-driven profiles.yml, clear lineage, incremental dbt models, and a CI-friendly dbt build flow 
+                making it reliable, auditable, and deployment-ready.
+              </p>
+              <button
+                class="btn btn--ghost btn--small"
+                onclick="location.href='https://github.com/pninad9/dbt-databricks-scd2-data-quality.git'"
+              >
+                View on GitHub
+              </button>
+            </div>
+          </article>
 
         <p class="projects-note">More projects coming soon…</p>
       </div>
